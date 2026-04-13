@@ -45,11 +45,11 @@ Plans:
   4. Reloading the page restores all previously set statuses for the displayed month
   5. The calendar is usable on both desktop and mobile viewports without horizontal scrolling
   6. The app deploys to GitHub Pages and loads correctly from the public URL with no build step
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 02-01: AppState pub-sub layer and CalendarGrid rendering (HTML structure, CSS Grid layout, today indicator)
-- [ ] 02-02: Status cycling interaction, StorageAdapter wiring, month navigation, and GitHub Pages deployment setup
+- [ ] 02-01-PLAN.md — AppState pub-sub object and CalendarGrid renderer with full unit test coverage
+- [ ] 02-02-PLAN.md — index.html, style.css, app.js bootstrap, event delegation wiring, and GitHub Pages deployment files
 
 ### Phase 3: Stats, Preferences, and Polish
 **Goal**: The average calculation is displayed and live, the weekend toggle works and persists, and the app is accessible and visually complete in both light and dark modes
