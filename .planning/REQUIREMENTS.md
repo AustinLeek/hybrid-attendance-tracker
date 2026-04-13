@@ -82,5 +82,28 @@ All localStorage and cookie operations wrapped in try/catch. App functions in a 
 - Annual summary view
 - PWA / service worker
 
+## Traceability
+
+| Requirement | Phase | Status |
+|-------------|-------|--------|
+| FR-1 | Phase 2 | Pending |
+| FR-2 | Phase 2 | Pending |
+| FR-3 | Phase 2 | Pending |
+| FR-4 | Phase 3 | Pending |
+| FR-5 | Phase 3 | Pending |
+| FR-6 | Phase 3 | Pending |
+| FR-7 | Phase 2 | Pending |
+| FR-8 | Phase 2 | Pending |
+| FR-9 | Phase 2 | Pending |
+| FR-10 | Phase 3 | Pending |
+| FR-11 | Phase 1 | Pending |
+| FR-12 | Phase 1 | Pending |
+| FR-13 | Phase 3 | Pending |
+| NFR-1 | Phase 1 | Pending |
+| NFR-2 | Phase 2 | Pending |
+| NFR-3 | Phase 2 | Pending |
+| NFR-4 | Phase 1 | Pending |
+| NFR-5 | Phase 1 | Pending |
+
 ---
 *Scoped: 2026-04-13*
