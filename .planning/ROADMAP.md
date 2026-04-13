@@ -12,7 +12,7 @@ Three phases deliver a fully working personal attendance tracker. Phase 1 builds
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation** - Storage helpers, date utilities, and verified average calculation formula
+- [x] **Phase 1: Foundation** - Storage helpers, date utilities, and verified average calculation formula (completed 2026-04-13)
 - [ ] **Phase 2: Calendar and Core Loop** - Working calendar grid with click-to-cycle status, month navigation, and persistence
 - [ ] **Phase 3: Stats, Preferences, and Polish** - Stats display, weekend toggle, dark mode, keyboard nav, and deployment
 
@@ -74,7 +74,7 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 1/2 | In Progress|  |
+| 1. Foundation | 2/2 | Complete   | 2026-04-13 |
 | 2. Calendar and Core Loop | 0/2 | Not started | - |
 | 3. Stats, Preferences, and Polish | 0/2 | Not started | - |
 
