@@ -86,15 +86,15 @@ All localStorage and cookie operations wrapped in try/catch. App functions in a 
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FR-1 | Phase 2 | Pending |
-| FR-2 | Phase 2 | Pending |
+| FR-1 | Phase 2 | Complete |
+| FR-2 | Phase 2 | Complete |
 | FR-3 | Phase 2 | Pending |
 | FR-4 | Phase 3 | Pending |
 | FR-5 | Phase 3 | Pending |
 | FR-6 | Phase 3 | Pending |
-| FR-7 | Phase 2 | Pending |
-| FR-8 | Phase 2 | Pending |
-| FR-9 | Phase 2 | Pending |
+| FR-7 | Phase 2 | Complete |
+| FR-8 | Phase 2 | Complete |
+| FR-9 | Phase 2 | Complete |
 | FR-10 | Phase 3 | Pending |
 | FR-11 | Phase 1 | Complete |
 | FR-12 | Phase 1 | Complete |

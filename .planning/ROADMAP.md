@@ -75,7 +75,7 @@ Phases execute in numeric order: 1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/2 | Complete   | 2026-04-13 |
-| 2. Calendar and Core Loop | 0/2 | Not started | - |
+| 2. Calendar and Core Loop | 1/2 | In progress | - |
 | 3. Stats, Preferences, and Polish | 0/2 | Not started | - |
 
 ## Requirement Coverage
