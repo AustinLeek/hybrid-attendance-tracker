@@ -20,12 +20,15 @@ Accurately calculate average in-office days per week, excluding time off and wor
 - [x] Month navigation to view past and future months — Validated in Phase 2: Calendar and Core Loop
 - [x] Current month shown by default — Validated in Phase 2: Calendar and Core Loop
 - [x] Static HTML suitable for GitHub Pages deployment — Validated in Phase 2: Calendar and Core Loop
+- [x] Weekends marked as "off" by default with toggle to enable — Validated in Phase 3: Stats, Preferences, and Polish
+- [x] Average in-office days per week calculation with live updates — Validated in Phase 3: Stats, Preferences, and Polish
+- [x] Per-status count totals update instantly — Validated in Phase 3: Stats, Preferences, and Polish
+- [x] Keyboard navigation (arrow keys, Enter/Space) — Validated in Phase 3: Stats, Preferences, and Polish
+- [x] Dark mode support via prefers-color-scheme — Validated in Phase 3: Stats, Preferences, and Polish
 
 ### Active
 
-- [ ] Weekends marked as "off" by default (not counted)
-- [ ] Toggle to enable/disable weekend days for tracking
-- [ ] Average in-office days per week calculation: in-office days / (total days - time off - WFA days)
+None — all v1.0 requirements validated.
 
 ### Out of Scope
 
@@ -58,4 +61,4 @@ Accurately calculate average in-office days per week, excluding time off and wor
 | Personal-only scope | Keeps v1 simple, no auth/team complexity | — Pending |
 
 ---
-*Last updated: 2026-04-13 after Phase 2: Calendar and Core Loop complete*
+*Last updated: 2026-04-15 after Phase 3: Stats, Preferences, and Polish complete — all v1.0 phases done*
