@@ -52,7 +52,6 @@ export function renderStats(avgEl, totalsEl, state, weekendsEnabled) {
   };
 
   for (const d of dayObjs) {
-    if (d.isFuture && d.status === STATUS.UNSET) continue;
     if (d.isWeekend && !weekendsEnabled) continue;
     if (d.status === STATUS.UNSET) continue;
     if (Object.prototype.hasOwnProperty.call(counts, d.status)) {
