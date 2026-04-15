@@ -2,41 +2,49 @@
 
 ## What This Is
 
-A static single-page web app that helps you track your hybrid work schedule on a monthly calendar. You click each day to set your status (in office, at home, time off, or work from anywhere), and it calculates your average in-office days per week. Hosted on GitHub Pages for easy access.
+A static single-page web app for tracking your hybrid work schedule on a monthly calendar. Click each day to set your status (in office, at home, time off, or work from anywhere), see your average in-office days per week update live, and toggle weekend tracking on or off. Supports keyboard navigation and dark mode. Hosted on GitHub Pages with zero build steps.
 
 ## Core Value
 
 Accurately calculate average in-office days per week, excluding time off and work-from-anywhere days from the denominator.
 
+## Current State
+
+**v1.0 MVP shipped 2026-04-15** — 3 phases, 6 plans, 1,928 LOC (JS/CSS/HTML/tests), 103 passing tests.
+
+Tech stack: Pure HTML/CSS/vanilla JS, no frameworks, no build tools. Vitest + jsdom for testing.
+
 ## Requirements
 
 ### Validated
 
-- [x] Attendance data persisted in localStorage across visits — Validated in Phase 1: Foundation
-- [x] User preferences (weekend toggle, etc.) stored in cookies — Validated in Phase 1: Foundation
-- [x] Monthly calendar grid showing all days of the current month — Validated in Phase 2: Calendar and Core Loop
-- [x] Click/tap each day to cycle through statuses — Validated in Phase 2: Calendar and Core Loop
-- [x] Color-coded status indicators for each status type — Validated in Phase 2: Calendar and Core Loop
-- [x] Month navigation to view past and future months — Validated in Phase 2: Calendar and Core Loop
-- [x] Current month shown by default — Validated in Phase 2: Calendar and Core Loop
-- [x] Static HTML suitable for GitHub Pages deployment — Validated in Phase 2: Calendar and Core Loop
-- [x] Weekends marked as "off" by default with toggle to enable — Validated in Phase 3: Stats, Preferences, and Polish
-- [x] Average in-office days per week calculation with live updates — Validated in Phase 3: Stats, Preferences, and Polish
-- [x] Per-status count totals update instantly — Validated in Phase 3: Stats, Preferences, and Polish
-- [x] Keyboard navigation (arrow keys, Enter/Space) — Validated in Phase 3: Stats, Preferences, and Polish
-- [x] Dark mode support via prefers-color-scheme — Validated in Phase 3: Stats, Preferences, and Polish
+- [x] Attendance data persisted in localStorage across visits — v1.0
+- [x] User preferences (weekend toggle) stored in cookies — v1.0
+- [x] Monthly calendar grid showing all days of the current month — v1.0
+- [x] Click/tap each day to cycle through statuses — v1.0
+- [x] Color-coded status indicators for each status type — v1.0
+- [x] Month navigation to view past and future months — v1.0
+- [x] Current month shown by default — v1.0
+- [x] Static HTML suitable for GitHub Pages deployment — v1.0
+- [x] Weekends marked as "off" by default with toggle to enable — v1.0
+- [x] Average in-office days per week calculation with live updates — v1.0
+- [x] Per-status count totals update instantly — v1.0
+- [x] Keyboard navigation (arrow keys, Enter/Space) — v1.0
+- [x] Dark mode support via prefers-color-scheme — v1.0
 
 ### Active
 
-None — all v1.0 requirements validated.
+None — all v1.0 requirements validated. Next milestone TBD.
 
 ### Out of Scope
 
 - Team/multi-user views — this is personal tracking only
 - Backend/database — all data stays client-side
 - Authentication — no login needed
-- Mobile app — web-only, though should be responsive
+- Mobile app — web-only, responsive design works on mobile
 - Export/reporting — v1 focuses on tracking and the average calculation
+- Calendar sync (Google/Outlook) — out of v1 scope
+- PWA / service worker — not needed for v1
 
 ## Context
 
@@ -54,11 +62,17 @@ None — all v1.0 requirements validated.
 ## Key Decisions
 
 | Decision | Rationale | Outcome |
-|----------|-----------|---------|
-| Static HTML over framework | GitHub Pages simplicity, no build step needed | — Pending |
-| localStorage for attendance data | Persists across visits without a server | — Pending |
-| Cookies for user preferences | User requested cookie-based preference storage | — Pending |
-| Personal-only scope | Keeps v1 simple, no auth/team complexity | — Pending |
+|-|-|-|
+| Static HTML over framework | GitHub Pages simplicity, no build step needed | ✓ Good — zero config deploy works perfectly |
+| localStorage for attendance data | Persists across visits without a server | ✓ Good — simple, reliable for single-user |
+| Cookies for user preferences | User requested cookie-based preference storage | ✓ Good — weekend toggle persists correctly |
+| Personal-only scope | Keeps v1 simple, no auth/team complexity | ✓ Good — shipped in 3 days |
+| Numeric Date constructor only | Prevents UTC timezone offset bugs | ✓ Good — zero date-related bugs |
+| AppState pub-sub pattern | Single source of truth, automatic re-renders | ✓ Good — clean data flow throughout |
+| Event delegation on grid | Survives innerHTML re-renders, single listener | ✓ Good — no listener cleanup needed |
+| CSS attribute selectors for status colors | No JS class manipulation needed | ✓ Good — clean separation of concerns |
+| initKeyboardNav extracted as export | Strategy pattern for testability | ✓ Good — 11 tests pass without full DOM boot |
+| Roving tabindex with modular wrapping | Natural grid navigation feel | ✓ Good — intuitive keyboard experience |
 
 ---
-*Last updated: 2026-04-15 after Phase 3: Stats, Preferences, and Polish complete — all v1.0 phases done*
+*Last updated: 2026-04-15 after v1.0 milestone shipped*
