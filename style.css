@@ -93,6 +93,22 @@ body {
   pointer-events: none;
 }
 
+.cal-cell[data-disabled="true"] {
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: default;
+  background: transparent !important;
+}
+
+.cal-cell:focus {
+  outline: 2px solid #1565C0;
+  outline-offset: -2px;
+  z-index: 1;
+}
+.cal-cell:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .cal-legend {
   display: flex;
   flex-wrap: wrap;
@@ -154,10 +170,96 @@ body {
 .stat-dot[data-status="time-off"]   { background: #9E9E9E; }
 .stat-dot[data-status="wfa"]        { background: #FF9800; }
 
+/* Preferences panel (weekend toggle) */
+.cal-preferences {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #555;
+}
+.cal-preferences label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.cal-preferences input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
 @media (max-width: 480px) {
   body { padding: 8px; }
   .cal-cell { min-height: 40px; }
   .cal-cell__num { font-size: 0.7rem; }
   .stats-average { font-size: 1.25rem; }
   .stats-totals { font-size: 0.75rem; }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #121212;
+    color: #e0e0e0;
+  }
+
+  .cal-nav button {
+    border-color: #424242;
+    color: #e0e0e0;
+  }
+  .cal-nav button:hover {
+    background: #1e1e1e;
+  }
+
+  .cal-header-cell {
+    color: #9e9e9e;
+  }
+
+  .cal-cell__num {
+    color: #e0e0e0;
+  }
+
+  .cal-cell[data-status="unset"] {
+    border-color: #424242;
+  }
+  .cal-cell[data-status="in-office"]  { background: #388E3C; }
+  .cal-cell[data-status="at-home"]    { background: #64B5F6; color: #121212; }
+  .cal-cell[data-status="time-off"]   { background: #757575; }
+  .cal-cell[data-status="wfa"]        { background: #FFB74D; color: #121212; }
+
+  .cal-cell--today {
+    outline-color: #42A5F5;
+  }
+
+  .cal-cell:focus {
+    outline-color: #42A5F5;
+  }
+
+  .legend-swatch[data-status="in-office"]  { background: #388E3C; }
+  .legend-swatch[data-status="at-home"]    { background: #64B5F6; }
+  .legend-swatch[data-status="time-off"]   { background: #757575; }
+  .legend-swatch[data-status="wfa"]        { background: #FFB74D; }
+
+  .stat-dot[data-status="in-office"]  { background: #388E3C; }
+  .stat-dot[data-status="at-home"]    { background: #64B5F6; }
+  .stat-dot[data-status="time-off"]   { background: #757575; }
+  .stat-dot[data-status="wfa"]        { background: #FFB74D; }
+
+  .stats-average {
+    color: #e0e0e0;
+  }
+  .stats-totals {
+    color: #bdbdbd;
+  }
+
+  .cal-legend {
+    color: #bdbdbd;
+  }
+  .legend-swatch {
+    border-color: rgba(255,255,255,0.1);
+  }
+
+  .cal-preferences {
+    color: #bdbdbd;
+  }
 }
